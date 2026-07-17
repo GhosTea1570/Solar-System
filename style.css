@@ -1,0 +1,210 @@
+@font-face{
+    src: url("fonts/Orbitron-VariableFont_wght.ttf");
+    font-family: "Orbitron";
+}   
+body{
+    background-color: rgb(24, 24, 24);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+.site-title {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    margin: 0;
+    
+    font-family: "Orbitron";
+    font-size: 32px;
+    color: white;
+    letter-spacing: 2px;
+    z-index: 10;
+}
+.description {
+    position: absolute;
+    top: 65px;
+    left: 35px;
+    margin: 0;
+    
+    font-family: "Orbitron";
+    font-size: 12px;
+    color: white;
+    letter-spacing: 2px;
+    z-index: 10;
+}
+.sun{
+    width: 75px;
+    height: 75px;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+}
+.hidden-text{
+    font-size: 30px;
+    font-family: "Orbitron";
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+}
+.sun:hover{
+    animation: glow 2s;
+}
+.sun:hover .hidden-text{
+    opacity: 1;
+    visibility: visible;
+}
+
+#planet1{
+    width: 25px;
+    height: 25px;
+    background: rgb(114, 116, 114);
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    animation: orbit 4s infinite linear;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#planet1 .hidden-text{
+    font-size: 15px;
+    text-align: center;
+    color: white;
+}
+#planet1:hover .hidden-text{
+    opacity: 1;
+    visibility: visible;
+}
+
+.planet-link{
+    text-decoration: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; 
+}
+
+.sun-link {
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 2;
+}
+
+#planet2{
+    width: 30px;
+    height: 30px;
+    background: rgb(240, 164, 78);
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    animation: orbit2 8s infinite linear;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#planet2 .hidden-text{
+    font-size: 15px;
+    text-align: center;
+    color: white;
+}
+#planet2:hover .hidden-text{
+    opacity: 1;
+    visibility: visible;
+}
+
+@keyframes orbit{
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg) translateX(70px) rotate(0deg)
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg) translateX(70px) rotate(-360deg)
+    }
+}
+@keyframes orbit2{
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg) translateX(105px) rotate(0deg)
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg) translateX(105px) rotate(-360deg)
+    }
+}
+
+#planet3{
+    width: 33px;
+    height: 33px;
+    background: rgb(49, 92, 20);
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    animation: orbit3 6s infinite linear;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#planet3 .hidden-text{
+    font-size: 15px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+#planet3:hover .hidden-text{
+    opacity: 1;
+    visibility: visible;
+}
+
+@keyframes orbit3{
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg) translateX(140px) rotate(0deg)
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg) translateX(140px) rotate(-360deg)
+    }
+}
+
+#planet4{
+    width: 33px;
+    height: 33px;
+    background: rgb(247, 85, 73);
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    animation: orbit4 7s infinite linear;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#planet4 .hidden-text{
+    font-size: 15px;
+    text-align: center;
+    color: white;
+}
+#planet4:hover .hidden-text{
+    opacity: 1;
+    visibility: visible;
+}
+
+@keyframes orbit4{
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg) translateX(180px) rotate(0deg)
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg) translateX(180px) rotate(-360deg)
+    }
+}
+@keyframes glow {
+    50%{box-shadow: 0px 0px 50px rgb(243, 243, 172)}
+}
